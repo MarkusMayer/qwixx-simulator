@@ -1,6 +1,5 @@
-package com.qwixx.runner;
+package com.qwixx.model;
 
-import com.qwixx.model.*;
 import com.qwixx.model.action.MarkColorDice;
 import com.qwixx.model.action.MarkWhiteDice;
 
@@ -31,7 +30,7 @@ public final class GameStateView implements StateView {
 
     @Override
     public List<MarkWhiteDice> legalWhiteMarks() {
-        Board board = myBoard();
+        final Board board = myBoard();
         int sum = roll.whiteSum();
         List<MarkWhiteDice> result = new ArrayList<>();
         for (RowColor color : RowColor.values()) {
@@ -45,7 +44,7 @@ public final class GameStateView implements StateView {
     @Override
     public List<MarkColorDice> legalColorMarks() {
         if (!iAmActivePlayer()) return List.of();
-        Board board = myBoard();
+        final Board board = myBoard();
         List<MarkColorDice> result = new ArrayList<>();
         for (RowColor color : state.activeColors()) {
             for (int sum : roll.colorSums(color)) {

@@ -2,7 +2,7 @@ package com.qwixx.strategy;
 
 import com.qwixx.model.*;
 import com.qwixx.model.action.*;
-import com.qwixx.runner.GameStateView;
+import com.qwixx.model.GameStateView;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;

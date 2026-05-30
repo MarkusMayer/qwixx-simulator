@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class RandomStrategyTest {
 
     private StateView viewFor(GameState state, DiceRoll roll, int playerIndex) {
-        return new com.qwixx.runner.GameStateView(state, roll, playerIndex);
+        return new com.qwixx.model.GameStateView(state, roll, playerIndex);
     }
 
     @Test
